@@ -8,7 +8,7 @@ class HealthResponse(BaseModel):
     status: str
 
 
-class IngestionResponse(BaseModel):
+class ConsumerResponse(BaseModel):
     status: str
 
 
@@ -21,8 +21,8 @@ class IncomingDataItem(BaseModel):
     email_recipient: str
     data_type: DataType
     received_at: datetime | None = datetime.utcnow()
-    extracted_content: str
-    raw_content: str
+    extracted_content: str | None = None
+    raw_content: str | None = None
     processed_at: datetime | None = None
 
 

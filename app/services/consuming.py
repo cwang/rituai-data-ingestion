@@ -1,7 +1,7 @@
 from motor import motor_asyncio
 
 from app.core.config import MONGODB_URL
-from app.models.ingestion import IncomingDataItem
+from app.models.consumption import IncomingDataItem
 
 client = motor_asyncio.AsyncIOMotorClient(MONGODB_URL)
 collection = client.get_default_database().get_collection("incoming-data")
